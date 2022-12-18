@@ -329,7 +329,7 @@ void s_run () {
     init_run();
     get_op();
     int count = 0;
-    while (reg_PC < prog_len + start_add && count <= 4096) {
+    while (reg_PC < prog_len + start_add) {
         // printf("Regitser PC = [%06x];\n", reg_PC);
         // printf("%d\n", op);
         // fprintf(f, "Register PC = [%06X];\n", reg_PC);
@@ -515,7 +515,6 @@ void s_run () {
             }
         }
         // get_op();
-        count++;
     }
     show_reg();
     fclose(f);
